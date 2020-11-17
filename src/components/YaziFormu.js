@@ -42,11 +42,11 @@ const onFormSubmit = (event) => {
     setHata("");//hatanın içini boşalttık.eski hata varsa temizledik
 
     if (props.yazi?.title) {
-        console.log("edit mod");
+        //console.log("edit mod");
         api()
         .put(`/posts/${props.match.params.id}`, yazi)
         .then((response) => {
-            console.log("EDİT", response);
+            //console.log("EDİT", response);
             props.history.push(`/posts/${props.match.params.id}`); //KULLANICIYI aynı yere geri gönderiyoruz
         })
         .catch((error) => {
@@ -72,7 +72,7 @@ const onFormSubmit = (event) => {
 
 //eğer bu if te hata alırsak ki aldık yani props.yazi içinde title yok derse undefined. ozaman yazi yanına bir ? koyuyoruz yani yazi yoksa hiç bakmıyor ve hata vermiyor
     useEffect(() => {
-        console.log("GELEN PROPS:", props );
+        //console.log("GELEN PROPS:", props );
        if( props.yazi?.title && props.yazi?.content ) setYazi(props.yazi);
 //eğer propstan gelene title ve content varsa setyazi yı props yazi yazı yap demek        
     }, [props.yazi]);//yani props.yazi değişirse bu useeffect çalışcak. bu useeffect bu diziye bağimli

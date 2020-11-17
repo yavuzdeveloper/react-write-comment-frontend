@@ -81,7 +81,7 @@ const YaziDetayi = (props) => {
             >
             Düzenle
             </Link>
-            <SilModal />
+            <SilModal yazi={yaziDetayi} push={props.history.push}/>
             {/* <Link       bu butonun yerine SilModel comp.de bir func oluşturduk onu kullancaz
             to="/" 
             className="ui red button"
