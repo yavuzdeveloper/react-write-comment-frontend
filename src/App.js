@@ -18,6 +18,7 @@ function App() {
         <header></header>
         
           <div className="ui raised very padded text container segment">
+            <h1>React-Yazı-Yorum-Frontend Uygulaması</h1>
             <Route path="/" exact component={YaziListesi} />
             <Route path="/posts/:id" exact component={YaziDetayi} />
             <Route path="/yaziekle" component={YaziEkle} />

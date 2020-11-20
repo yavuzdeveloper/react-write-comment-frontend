@@ -1,8 +1,11 @@
 import React from 'react';
+import DeleteModal from './DeleteModal';
+
 
 //yaziyorumlarından props olarak gelen yorumları aşağıda props.yorumlar olarak map ledik...
 
 const YorumListesi = (props) => {
+    //console.log("YORUM:",props);
     return (
         <React.Fragment>
              <h3>YORUMLAR</h3>
@@ -17,7 +20,11 @@ const YorumListesi = (props) => {
                                 /> */}
                                 <div className="content">
                                 <span className="header">{yorum.display_name}</span>
+                               
                                 <div className="description">{yorum.body}</div>
+                                <br/>
+                                
+                                <DeleteModal yorumlar={props.yorumlar}/>
                                 </div>
                             </div>
                         </div>)

@@ -7,7 +7,7 @@ import { api } from './api';
 //
 
 const SilModal = ({ yazi, push }) => {
-    //console.log("SİLMODAL A GELEN:", yazi); gelen yazıyı gördük
+    //console.log("SİLMODAL A GELEN:", yazi); //gelen yazıyı gördük
     const [open, setOpen] = useState(false);
     const [hata, setHata] = useState("");
     const show = () => setOpen(true);

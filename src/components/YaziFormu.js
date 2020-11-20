@@ -20,7 +20,7 @@ import { withRouter } from 'react-router-dom';//bunu yazma sebebi axios ile yeni
 
 
 const YaziFormu = (props) => {
-    //console.log("GELEN PROPS:",props.yazi);
+    //console.log("GELEN PROPS:",props.yazi); //ilk boş geliyor dolusu geç geliyor
     const [yazi, setYazi] = useState({ 
         title:"", 
         content:""

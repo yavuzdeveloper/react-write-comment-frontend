@@ -19,6 +19,9 @@ const YaziListesi = (props) => {
   //aşağıda yazilistesini map leyip item ile döndürcez:
     return  (
     <div className="ui relaxed divided list">
+    <Link to="/yaziekle" className="ui primary button">
+    Yazı Ekle
+    </Link>
       {yaziListesi.map(yazi => {
           return (<div className="item" key={yazi.id}>
             <i className="large github middle aligned icon"></i>
