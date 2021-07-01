@@ -49,6 +49,9 @@ const YorumFormu = (props) => {
             <button className="ui-blue button" type="submit">
                 Yorum Gönder
             </button>
+             <button className="ui-blue button" type="submit">
+                Anasayfa
+            </button>
           </form> 
         </React.Fragment>
     )
