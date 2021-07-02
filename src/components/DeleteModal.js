@@ -4,23 +4,20 @@ import { api } from './api';
 
 
 const DeleteModal = (props) => {
-    console.log("MODAL A GELEN YORUMLAR:",props);
+   
     const [open, setOpen] = useState(false);
     const show = () => setOpen(true);
     const close = () => setOpen(false);
     
     const handleDelete = (id) => {
+        console.log("AAAA:", id);
         api()
         .delete(`/posts/${id}`)
-        .then(() => { //başarılı olırsa burayı yapıyoruz yani modal kapat ve ana sayfaya yönlen
-           // setHata("");// hata mesajı sonrası yeni bir istek yapılabilir onun için hata mesajını temziledik
-            close();
-            //push(`/`);//burda push metodu yok bunun için iki yol var 1.withRouter ile yönlendirme 2. yaziDetayındaki push metodunu yazi ile beraber buraya gönderme
-//biz yazi ile beraber push metodunu da aldık yukrda func içine yazdık ve burda kullanarak anasayfaya yönlendiridik            
+        .then(() => { 
+            close();         
         })
-        .catch(()=> { //başarılı olmazsada istek. burda hata mesajı vercek yukarda yazdığımız hata state ini güncelleyerek
-           // setHata("Yazıyı silerken hata oluştu");
-//bu hatayı da aşağıda bir yerde göstermeliyiz.  hata varsa gösteriyo          
+        .catch((err)=> {
+            console.log(err)       
         });
     };
 

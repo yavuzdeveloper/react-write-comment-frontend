@@ -2,14 +2,12 @@ import React from 'react';
 import DeleteModal from './DeleteModal';
 
 
-//yaziyorumlarından props olarak gelen yorumları aşağıda props.yorumlar olarak map ledik...
-
 const YorumListesi = (props) => {
     //console.log("YORUM:",props);
     return (
         <React.Fragment>
              <h3>YORUMLAR</h3>
-                {props.yorumlar.map(yorum => {//map lerken herzaman en üstteki eleman key almalı ki react bu elemanların sırasını dom da tanıyabilsin
+                {props.yorumlar.map(yorum => {
                     return(
                         <div className="ui relaxed list"
                         key={yorum.id}>

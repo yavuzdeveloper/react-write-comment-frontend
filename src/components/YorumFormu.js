@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-//bu comp e taşımamaız gereken handlecommentsubmit, handleOnChange, yorum, handleOnChange
 
 const YORUM_BASLANGIC = {
   display_name: "",  
@@ -11,22 +10,18 @@ const YorumFormu = (props) => {
   const [yorum, setYorum] = useState(YORUM_BASLANGIC)
 
   const handleOnChange = event => {
-    // //içine event alıp setcommentbody yi çağırıp içine bi obje göndercek: ...commentbody önceki değerleini koruyacak üzerine ekleyecek yani
-    // //ve eventten gelen target in name ile eventten gelen target in değerini kaydetcek 
-    // //burdaki name aşağıda body ve display_name olarak verildi (inputlarda) ona göte state lerini değiştirecek   
-            setYorum({...yorum, [event.target.name]: event.target.value})
-        }
-    
+    setYorum({...yorum, [event.target.name]: event.target.value})
+  }
   
     return (
         <React.Fragment>
-            <h3>Yorum Yaz:</h3>
+          <h3>Yorum Yaz:</h3>
           <form className="ui form" 
-              onSubmit={(event) => {
-              event.preventDefault();//formun sayfa yenileme işlemini iptal ettik
-              props.handleSubmit(yorum, event); //propslardan aldığımız handlesubmit i burda kullandık
-              setYorum(YORUM_BASLANGIC);//yorumu boşalttık
-              }}
+            onSubmit={(event) => {
+            event.preventDefault();
+            props.handleSubmit(yorum, event); 
+            setYorum(YORUM_BASLANGIC);
+            }}
           >
           <div className="ui mini icon input">
             <input 

@@ -1,14 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-
 import YaziListesi from './components/YaziListesi';
 import YaziDetayi from "./components/YaziDetayi";
 import YaziEkle from "./components/YaziEkle";
 import YaziDuzenle from "./components/YaziDuzenle";
-
-//sayfamızda yorum yazıları görünecek bunun için bir header ve section kısmı olcak
-//section kısmını semantic ui dan alıyoruz
 
  
 function App() {
